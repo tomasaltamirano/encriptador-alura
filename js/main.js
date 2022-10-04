@@ -1,7 +1,5 @@
 //Variables
-
 const capturarTexto = document.querySelector('#textArea');
-
 const encriptarTexto = document.querySelector('#encriptar');
 const desencriptarTexto = document.querySelector('#desencriptar');
 
@@ -37,9 +35,6 @@ function encrypt (encryptText){
         ['u', 'ufat'],   
     ]
 
-    // encryptText = encryptText.toLowerCase();
-
-    //se inicializa la variable i en 0 y mientras que la variable i sea menor que la cantidad de caracteres que tenga char, va ir aumentando su valor y ya no va valer 0, pero nunca va valer mas que char.length
   for(let i = 0; i < char.length; i++){
     if (encryptText.includes (char[i][0]) ){
         encryptText = encryptText.replaceAll(char[i][0], char[i][1]);
@@ -47,7 +42,6 @@ function encrypt (encryptText){
   }
   return encryptText;
 }
-  //char[i] quiere decir que empiece a buscar la VOCAL con el include a partir de esa posicion 
 
 //desencriptar
 desencriptarTexto.addEventListener('click', function(){
@@ -66,9 +60,6 @@ function decrypt(decryptText){
         ['u', 'ufat'],   
     ]
 
-    // encryptText = encryptText.toLowerCase();
-
-    //se inicializa la variable i en 0 y mientras que la variable i sea menor que la cantidad de caracteres que tenga char, va ir aumentando su valor y ya no va valer 0, pero nunca va valer mas que char.length
   for(let i = 0; i < char.length; i++){
     if (decryptText.includes (char[i][1]) ){
         decryptText = decryptText.replaceAll(char[i][1], char[i][0]);
@@ -86,6 +77,5 @@ function decrypt(decryptText){
     tooltip.innerHTML = "Texto copiado!" 
   
  })
- //new ClipboardJS('.btn-copiar')
 
  
