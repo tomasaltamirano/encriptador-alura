@@ -28,14 +28,6 @@ body{
     
 }
 
-/* header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2.5rem;
-    margin-bottom: 1rem;
-} */
-
 .logo-alura{
     padding-left: 2rem;
 }
