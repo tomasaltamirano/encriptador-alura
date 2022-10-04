@@ -15,7 +15,7 @@
 					<img src="img/a.svg" alt="" />
 				</div>
                 <div class="formulario">
-                    <form action="">
+                    <form action="" id="resetForm">
                         <textarea id="textArea" placeholder="Ingrese el texto aquí"></textarea>
                     </form>
                 </div>
@@ -38,7 +38,9 @@
 					</p>
                 </div>
                 <div class="imagen-texto contenido">
-					<textarea  id="mostrarMensaje" cols="18" rows="18"></textarea>
+					<form action="" id="resetResult">
+						<textarea  id="mostrarMensaje" cols="18" rows="18"></textarea>
+					</form>
 					<button id="copiar" class="btn-copiar tooltip">
 						<i class='bx bx-clipboard' >
 							<span class="tooltiptext" id="textoFlotante">Copiar al portapapeles</span>

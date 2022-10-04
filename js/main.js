@@ -48,7 +48,12 @@ desencriptarTexto.addEventListener('click', function(){
     const desencriptar = decrypt(capturarTexto.value)//Toma el valor del textarea
     mostrarMensaje.value = desencriptar
     console.log(desencriptar);
-    
+    if(desencriptar.length === 0){
+      cuadroResultado.style.display = 'none';
+  }else{
+      cuadroResultado.style.display = 'block';
+      cuadroImagen.style.display = 'none';
+  }
 })
 
 function decrypt(decryptText){
@@ -68,6 +73,8 @@ function decrypt(decryptText){
   return decryptText;
 }
 
+
+
  copiar.addEventListener('click', function(){
      mostrarMensaje.select();
     mostrarMensaje.setSelectionRange(0, 99999);
@@ -75,6 +82,12 @@ function decrypt(decryptText){
 
     const tooltip = document.querySelector('#textoFlotante');
     tooltip.innerHTML = "Texto copiado!" 
+    setTimeout(() => {
+      const reset = document.getElementById('resetForm')
+      const resetResult = document.getElementById('resetResult');
+      reset.reset()
+      resetResult.reset()
+    }, 2000);
   
  })
 
