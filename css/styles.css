@@ -141,6 +141,7 @@ textarea::placeholder{
     display: flex;
     justify-content: center;
     width: 30%;
+    height: 85vh;
     margin-top: 30px;
     overflow: hidden;
     border-radius: 32px;
